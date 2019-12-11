@@ -33,17 +33,17 @@ class MainActivity : AppCompatActivity() {
             textViewInterest = findViewById(R.id.textViewInterest)
             textViewMonthlyRepayment = findViewById(R.id.textViewMonthlyRepayment)
 
-            val loan:Int = Integer.parseInt(editCP.toString()) - Integer.parseInt(editDP.toString())
-            val interest:Int = loan * Integer.parseInt(editIR.toString()) * Integer.parseInt(editLP.toString())
-            val mp:Int = (loan + interest) / Integer.parseInt(editLP.toString())/ 12
+            val loan:Int = Integer.parseInt(editCP.text.toString()) - Integer.parseInt(editDP.text.toString())
+            val interest:Int = loan * Integer.parseInt(editIR.text.toString()) * Integer.parseInt(editLP.text.toString())
+            val mp:Int = (loan + interest) / Integer.parseInt(editLP.text.toString())/ 12
 
-            val loanS:String = textViewLoan.toString() + loan.toString()
-            val interestS:String = textViewInterest.toString() + interest.toString()
-            val mpS:String = textViewMonthlyRepayment.toString() + mp.toString()
+            val loanS:String = textViewLoan.text.toString() + loan.toString()
+            val interestS:String = textViewInterest.text.toString() + interest.toString()
+            val mpS:String = textViewMonthlyRepayment.text.toString() + mp.toString()
 
-            textViewLoan.setText(loanS)
-            textViewInterest.setText(interestS)
-            textViewMonthlyRepayment.setText(mpS)
+            textViewLoan.text = loanS
+            textViewInterest.text = interestS
+            textViewMonthlyRepayment.text = mpS
         }
     }
 }
