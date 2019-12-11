@@ -45,5 +45,25 @@ class MainActivity : AppCompatActivity() {
             textViewInterest.text = interestS
             textViewMonthlyRepayment.text = mpS
         }
+
+        val buttonReset = findViewById(R.id.buttonReset) as Button
+
+        buttonReset.setOnClickListener{
+            editCP = findViewById(R.id.editTextCarPrice)
+            editDP = findViewById(R.id.editTextDownPayment)
+            editLP = findViewById(R.id.editTextLoanPeriod)
+            editIR = findViewById(R.id.editTextInterestRate)
+            textViewLoan = findViewById(R.id.textViewLoan)
+            textViewInterest = findViewById(R.id.textViewInterest)
+            textViewMonthlyRepayment = findViewById(R.id.textViewMonthlyRepayment)
+
+            editCP.text = null
+            editDP.text = null
+            editLP.text = null
+            editIR.text = null
+            textViewLoan.text = getString(R.string.loan)
+            textViewInterest.text = getString(R.string.interest)
+            textViewMonthlyRepayment.text =  getString(R.string.monthly_repayment)
+        }
     }
 }
